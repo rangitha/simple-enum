@@ -1,11 +1,5 @@
-import SimpleEnum from './simple-enum';
+const Enum = require('./enum');
+const Status = new Enum(['Failed', 'Success', 'Pending']);
 
-const status = new SimpleEnum(['Failed', 'Success', 'Pending']);
-
-console.log(status.Failed);
-// 0
-
-console.log(status[status.Failed]);
-// 'Failed'
-
-
+console.log(Status.Failed); // 0
+console.log(Status[Status.Failed]); // 'Failed'
