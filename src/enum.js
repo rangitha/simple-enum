@@ -1,9 +1,10 @@
-module.exports = function (members) {
+module.exports = function (members, startIndex) {
   var Enum = this;
 
   if (members instanceof Array) {
     return members.forEach(function (member, index) {
-      Enum[Enum[index] = member] = index;
+      var value = startIndex ? startIndex + index : index;
+      Enum[Enum[value] = member] = value;
     });
   }
 
