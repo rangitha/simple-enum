@@ -1,0 +1,26 @@
+{
+  "name": "simple-enum",
+  "version": "1.0.0",
+  "description": "A simple enumeration type for JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rangitha/simple-enum.git"
+  },
+  "keywords": [
+    "javascript",
+    "enum"
+  ],
+  "author": "Rangitha Kuruppu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rangitha/simple-enum/issues"
+  },
+  "homepage": "https://github.com/rangitha/simple-enum#readme",
+  "dependencies": {
+    "deep-freeze": "0.0.1"
+  }
+}

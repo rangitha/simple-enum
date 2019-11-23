@@ -28,3 +28,9 @@ const BooleanLikeHeterogeneousEnum = new Enum({
 });
 console.log(BooleanLikeHeterogeneousEnum.No); // 0
 console.log(BooleanLikeHeterogeneousEnum.Yes); // 'Yes'
+
+const Status = new Enum(['Success', 'Pending', 'Failed'], 1);
+Status.Unknown = 4;
+Status.Success = 0;
+console.log(Status.Unknown); // undefined
+console.log(Status.Success); // 1
