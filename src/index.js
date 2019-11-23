@@ -1,11 +1,36 @@
-import SimpleEnum from './simple-enum';
+const Enum = require('./enum');
 
-const status = new SimpleEnum(['Failed', 'Success', 'Pending']);
+const Direction = new Enum(['Up', 'Down', 'Left', 'Right']);
+console.log(Direction.Up); // 0
+console.log(Direction[Direction.Up]); // 'Up'
 
-console.log(status.Failed);
-// 0
+const Seasons = new Enum(['Spring', 'Summer', 'Autumn', 'Winter'], 1);
+console.log(Seasons.Spring); // 1
+console.log(Seasons.Summer); // 2
 
-console.log(status[status.Failed]);
-// 'Failed'
+const Response = new Enum({
+  No: 0,
+  Yes: 1
+});
+console.log(Response.No); // 0
+console.log(Response[Response.No]); // 'No'
 
+const Button = new Enum({
+  Confirm: 'OK',
+  Dismiss: 'Cancel'
+});
+console.log(Button.Confirm); // 'OK'
+console.log(Button[Button.Confirm]); // 'Confirm'
 
+const BooleanLikeHeterogeneousEnum = new Enum({
+  No: 0,
+  Yes: 'Yes'
+});
+console.log(BooleanLikeHeterogeneousEnum.No); // 0
+console.log(BooleanLikeHeterogeneousEnum.Yes); // 'Yes'
+
+const Status = new Enum(['Success', 'Pending', 'Failed'], 1);
+Status.Unknown = 4;
+Status.Success = 0;
+console.log(Status.Unknown); // undefined
+console.log(Status.Success); // 1
